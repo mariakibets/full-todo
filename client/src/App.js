@@ -1,5 +1,5 @@
-import React, {usereducer} from 'react';
-import { BrowserRouter, Router, Route } from 'react-router-dom';
+import React, {useReducer} from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import TodoPage from './pages/TodoPage';
 
@@ -10,7 +10,7 @@ function App() {
   };
 
 
-  const [state, dispatch] = userreducer({
+  const [state, dispatch] = useReducer({
     user: null,
     task: []
   })
@@ -20,7 +20,6 @@ function App() {
        <Routes>
          <Route path = '/' element = {<Home/>}/>
          <Route path = 'tasks' element = {<TodoPage/>}/>
-         
        </Routes>
    </BrowserRouter>
   );

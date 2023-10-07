@@ -9,5 +9,5 @@ const SignIn= () => {
 }
 
 
-export default Index;
+export default SignIn;
 
